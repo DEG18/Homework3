@@ -3,10 +3,10 @@ var generateBtn, lowalphabet, capalphabet, numbers, symbols, lenpassword, keep;
 var Tlowalphabet, Tcapalphabet, Tnumbers, Tsymbols, x, newstring, rorder;
 generateBtn = document.querySelector("#generate");
 
-lowalphabet = false;
-capalphabet = false;
-numbers = false;
-symbols = false;
+Tlowalphabet = false;
+Tcapalphabet = false;
+Tnumbers = false;
+Tsymbols = false;
 keep = true;
 
 // GIVEN I need a new, secure password
@@ -36,6 +36,8 @@ function generatePassword() {
 
   if (keep) {
     alert("Generate Password Fail! Please try again!");
+    var refresh = "Generate Password Fail! Please try again!".split("");
+    return refresh;
   } else {
     //user can choose password criteria
     Tnumbers = confirm("Do you want numeric in your password?"); //if "Test number" confirm ok it will trun numbers=true
