@@ -60,7 +60,7 @@ function generatePassword() {
     // console.log(capalphabet);
 
     numbers = "1234567890".split("");
-    console.log(numbers);
+    // console.log(numbers);
 
     symbols = "!@#$%^&*()_+~`[]{}|;:,./<>?'".split(""); //28 elements
     // console.log(symbols);
