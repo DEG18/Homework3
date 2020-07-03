@@ -99,14 +99,17 @@ function generatePassword() {
       }
     }
     console.log(newpasswordarray);
-    // console.log(newpasswordarray.join(""));
+    // newpasswordarray.sort();
+    console.log(newpasswordarray.sort());
 
-    //make newpasswordarray into random order, and add them to a string
-    // for (x = 0; x < newpasswordarray.length; x++) {
-    //   rorder = Math.floor(Math.random() * newpasswordarray.length);
-    //   newstring = newstring + newpasswordarray[rorder];
-    // }
-    // console.log(newstring);
+    //make newpasswordarray into random order
+    for (var neworder; neworder < newpasswordarray.length; neworder++) {
+      var one = Math.floor(Math.random() * newpasswordarray.length);
+      var two = Math.floor(Math.random() * newpasswordarray.length);
+      var temp = newpasswordarray[one];
+      newpasswordarray[one] = newpasswordarray[two];
+      newpasswordarray[two] = temp;
+    }
 
     return newpasswordarray;
   }
