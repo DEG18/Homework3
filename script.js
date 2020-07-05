@@ -7,12 +7,12 @@ Tlowalphabet = false;
 Tcapalphabet = false;
 Tnumbers = false;
 Tsymbols = false;
-keep = true;
 
 // GIVEN I need a new, secure password
 // WHEN I click the button to generate a password
 // THEN I am presented with a series of prompts for password criteria
 function generatePassword() {
+  keep = true;
   lenpassword = prompt(
     "Enter an integer of length of your password (between 8-128): "
   );
@@ -100,16 +100,17 @@ function generatePassword() {
     }
     console.log(newpasswordarray);
     // newpasswordarray.sort();
-    console.log(newpasswordarray.sort());
+    // console.log(newpasswordarray.sort());
 
     //make newpasswordarray into random order
-    for (var neworder; neworder < newpasswordarray.length; neworder++) {
+    for (var neworder = 0; neworder < newpasswordarray.length; neworder++) {
       var one = Math.floor(Math.random() * newpasswordarray.length);
       var two = Math.floor(Math.random() * newpasswordarray.length);
       var temp = newpasswordarray[one];
       newpasswordarray[one] = newpasswordarray[two];
       newpasswordarray[two] = temp;
     }
+    console.log(newpasswordarray);
 
     return newpasswordarray;
   }
