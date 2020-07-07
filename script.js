@@ -96,6 +96,10 @@ function generatePassword() {
         console.log(d);
         newpasswordarray.push(d);
         i++;
+      } else {
+        alert("Empty Password! Please try again!");
+        var refresh = "Empty Password! Please try again!".split("");
+        return refresh;
       }
     }
     console.log(newpasswordarray);
